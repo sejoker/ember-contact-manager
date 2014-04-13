@@ -1,0 +1,1 @@
+EmberContactManager.ApplicationAdapter = DS.FixtureAdapter;
