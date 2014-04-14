@@ -1,18 +1,33 @@
-<div id="floatingCirclesG" class="center-block">
-      <div class="f_circleG" id="frotateG_01">
-      </div>
-      <div class="f_circleG" id="frotateG_02">
-      </div>
-      <div class="f_circleG" id="frotateG_03">
-      </div>
-      <div class="f_circleG" id="frotateG_04">
-      </div>
-      <div class="f_circleG" id="frotateG_05">
-      </div>
-      <div class="f_circleG" id="frotateG_06">
-      </div>
-      <div class="f_circleG" id="frotateG_07">
-      </div>
-      <div class="f_circleG" id="frotateG_08">
-      </div>
-</div>
+<h2 class="page-header text-center">List of contacts</h2>
+<p class="text-center">
+	<a href="#contacts/new" class="btn btn-lg btn-outline add-contact-btn">Add contact</a>
+</p>
+<ul class="media-list row contacts-container">
+	{{#each controller}}
+	<div class="thumbnail">
+		<img class="media-object" {{bind-attr src="avatar"}}>
+	</div>
+	<div class="media-heading">
+		<h4>
+			{{ firstName }} {{ lastName }}
+			<small>
+				<a href="#contacts/edit/{{id}}">
+					<span class="glyphicon-pencil edit-contact"></span>
+					<a href="#contacts/remove/{{id}}" class="delete-contact">
+						<span class="glyphicon glyphicon-trash"></span>
+					</a>
+				</a>
+			</small>
+		<h4>
+	</div>
+	<div class="media-body">
+		<dl>
+			<dt>Title:</dt>
+			<dd>{{title}}</dd>
+			<dt>Gender:</dt>
+			<dd>{{gender}}</dd>
+		</dl>
+	</div>
+	<hr>
+	{{/each}}
+</ul>

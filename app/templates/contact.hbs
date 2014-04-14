@@ -1,0 +1,23 @@
+<div class="thumbnail">
+    		<img class="media-object" src="{{ avatar }}">
+</div>
+<div class="media-heading">
+	<h4>
+		{{ firstName }} + ' ' + {{ lastName }}
+		<small>
+			<a href="#contacts/edit/{{id}}"><span class="glyphicon-pencil edit-contact"></span>
+			<a href="#contacts/remove/{{id}}" class="delete-contact">
+				<span class="glyphicon glyphicon-trash"></span>
+			</a>
+		</small>
+	<h4>
+</div>
+<div class="media-body">
+	<dl>
+		<dt>Title:</dt>
+		<dd>{{title}}</dd>
+		<dt>Gender:</dt>
+		<dd>{{gender}}</dd>
+	</dl>
+</div>
+<hr>
